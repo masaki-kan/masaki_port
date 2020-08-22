@@ -1,0 +1,36 @@
+@mixin new_form(){
+  h1{
+    text-align: center;
+  }
+  h2{
+    text-align: center;
+  }
+  h3{
+    text-align: center;
+  }
+}
+
+.new_form{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+@include new_form();
+#text{
+  display: flex;
+  width: 100%;
+  @include new_form();
+  textarea{
+    width: 90%;
+    border: none;
+  }
+  .submit{
+    margin: 0 10px;
+  }
+  label{
+    margin: 0 0 0 10px;
+    img{
+      width: 50px;
+    }
+  }
+}
+}

@@ -1,0 +1,108 @@
+@media screen and (min-width:641px){
+header{
+      width: 100%;
+  .header_nav{
+    display: -webkit-box;
+    background: #000;
+    #nav_box{
+      display: table;
+      width: 960px;
+      margin: 0 auto;
+      padding: 0;
+    li{
+      display: inline-block;
+      margin: 0 5px;
+      width: auto;
+      a{
+        &:active{
+          position: relative;
+          top: 10px;
+        }
+      }
+    }
+      #user{
+        font-size: 18px;
+        color: #3097D1;
+        background: none;
+        a{
+          color: #fff;
+          text-decoration: none;
+
+        }
+      }
+      p{
+        width: auto;
+        background: #3097D1;
+      }
+      a{
+        color: #fff;
+        background: #000;
+        padding: 10px;
+        display: block;
+      }
+    }
+    #nav_act{
+      display: block;
+    p{
+      background: #3097D1;
+      margin-right: 10px;
+      color: #fff;
+      padding: 10px;
+      display: block;
+      &:active{
+        display: none;
+      }
+     }
+    }
+  }
+}
+}
+
+@media screen and (max-width:640px){
+
+  header{
+        width: 100%;
+        margin: 0;
+    .header_nav{
+      display: -webkit-box;
+      #nav_box{
+        display: block;
+            width: 100%;
+            padding: 0;
+            background: #3097D1;
+        #user{
+          color: #3097D1;
+          background: none;
+        }
+        li{
+          list-style: none;
+              float: left;
+        }
+        p{
+          width: auto;
+          background: #3097D1;
+        }
+        a{
+          color: #fff;
+              width: 100%;
+              display: inline-block;
+              padding: 10px;
+        }
+      }
+      #nav_act{
+        display: block;
+
+      p{
+        background: #3097D1;
+        margin-right: 10px;
+        color: #fff;
+        padding: 10px;
+        display: block;
+        &:active{
+          display: none;
+        }
+       }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.content_h{
+  display: block;
+  h2{
+    text-align: center;
+  }
+}
+
+.content_c{
+  display: block;
+  padding: 20px 30px;
+  .content_p{
+    float: left;
+    margin-bottom: 30px;
+    img{
+      width: 300px;
+      margin: 0 10px;
+      display: block;
+    }
+    a{
+      &:hover{
+        position: relative;
+        bottom: 5px;
+      }
+    }
+  }
+}

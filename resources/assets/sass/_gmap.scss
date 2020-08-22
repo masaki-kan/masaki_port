@@ -1,0 +1,142 @@
+@mixin midashi(){
+  h1, h2{
+    text-align: center;
+    margin: 20px 0 10px 0;
+    color: #000;
+  }
+}
+@mixin fontfamily(){
+  p{font-family:"ＭＳ ゴシック",sans-serif;}
+}
+body{background: #fff;@include fontfamily();width:100%;
+}
+@media screen and (min-width:960px){
+#main{@include midashi();
+  h3{text-align: center;margin: 50px 0 30px 0;border-bottom: 2px solid #000;color: #000;}
+  .map_title_c{width: 930px;display: block;padding: 0 30px;margin: 0 auto;
+    .body{margin-top: 10px;
+      p{padding: 10px;margin: 0;}
+    }
+    #map_image img{  width: 150px;display: flex;margin: 0 auto;}
+    #image{height: 300px;display: block;margin: 0 auto;}
+    p{padding: 10px;margin: 0;}
+    .result_flex{display: flex;width: 100%;margin-bottom: 10px;padding: 10px 0;background: #fff;
+    .result_flex_l_content{width: 49%;margin-right: 1%;}
+    .result_flex_r_content{width: 50%;padding: 0;display: block;
+    .swiper_input{display: block;width:100%;
+    .label_input{
+    label{display: block;text-align: center;padding: 10px 0;background: #ccc;border-radius: 20px;margin-top: 20px;}
+    input{margin: 0 auto;}}
+    button{padding: 10px 20px;margin-top: 20px;background: #000;color: #fff;display: block;margin: 10px auto 0;}}}}
+  .pagenavi{width: 70%;margin: 0 auto;display: block;}
+  .form_c{display: block;width: 100%;margin: 0 auto 30px;
+  label{display: block;max-width: 100px;margin-bottom: 5px;text-align: center;font-weight: 700;
+      margin: 10px 0;color: #fff;padding: 5px;background: #3097D1;}
+  .input{width: auto;margin: 0 auto 10px;padding: 0 10px 10px;display: block;border-radius: 5px;border: 1px solid #ccc;
+  .submit_button{display: block;font-size: 20px;background: #3097D1;color: #fff;border: none;border-radius: 5px;
+  a{color: #fff!important;}
+  &:hover{color: #3097D1;background: #fff;}}}}
+  .my_map{width: 100%;display: block;margin: 30px auto 30px;position: relative;overflow: hidden;}
+  #___gcse_0{width: 60%;margin: 0 auto;}
+  .c_flex{display: flex;width: 100%;margin-bottom: 5px;border-bottom: 1px solid;position: relative;
+    .c_flex_r_user{
+      position: absolute;
+      right: 0;
+      display: flex;
+      bottom: 10px;
+      img{width: auto;height: 45px;}
+      p{width: auto;padding: 0px 10px 0 0;display: flex;align-items: center;}}
+    .c_flex_l_content{width: 25%;margin-right: 1%;}
+    .c_flex_r_content{width: 74%;}
+  }}
+  label{display: block;text-align: center;padding: 10px 0;background: #ccc;border-radius: 20px;}
+  textarea{width:80%;display: block;margin: 0 auto 10px;}
+}}
+@media screen and (min-width:641px) and (max-width:959px){
+  #main{@include midashi();
+    h3{text-align: center;margin: 50px 0 30px 0;border-bottom: 2px solid #000;color: #000;}
+    .map_title_c{width: 100%;display: block;padding: 0 30px;margin: 0 auto;
+      .body{margin-top: 10px;
+        p{padding: 10px;margin: 0;}
+      }
+      #map_image img{  width: 150px;display: flex;margin: 0 auto;}
+      #image{height: 300px;display: block;margin: 0 auto;}
+      p{padding: 10px;margin: 0;}
+      .result_flex{display: flex;width: 100%;margin-bottom: 10px;padding: 10px 0;background: #fff;
+      .result_flex_l_content{width: 49%;margin-right: 1%;}
+      .result_flex_r_content{width: 50%;padding: 0;display: block;
+      .swiper_input{display: block;width:100%;
+      .label_input{
+      label{display: block;text-align: center;padding: 10px 0;background: #ccc;border-radius: 20px;margin-top: 20px;}
+      input{margin: 0 auto;}}
+      button{padding: 10px 20px;margin-top: 20px;background: #000;color: #fff;display: block;margin: 10px auto 0;}}}}
+    .pagenavi{width: 70%;margin: 0 auto;display: block;}
+    .form_c{display: block;width: 100%;margin: 0 auto 30px;
+    label{display: block;max-width: 100px;margin-bottom: 5px;text-align: center;font-weight: 700;
+        margin: 10px 0;color: #fff;padding: 5px;background: #3097D1;}
+    .input{width: auto;margin: 0 auto 10px;padding: 0 10px 10px;display: block;border-radius: 5px;border: 1px solid #ccc;
+    .submit_button{display: block;font-size: 20px;background: #3097D1;color: #fff;border: none;border-radius: 5px;
+    a{color: #fff!important;}
+    &:hover{color: #3097D1;background: #fff;}}}}
+    .my_map{width: 100%;display: block;margin: 30px auto 30px;position: relative;overflow: hidden;}
+    #___gcse_0{width: 60%;margin: 0 auto;}
+    .c_flex{display: flex;width: 100%;margin-bottom: 5px;border-bottom: 1px solid;position: relative;
+      .c_flex_r_user{
+        position: absolute;
+        right: 0;
+        display: flex;
+        bottom: 10px;
+        img{width: auto;height: 45px;}
+        p{width: auto;padding: 0px 10px 0 0;display: flex;align-items: center;}}
+      .c_flex_l_content{width: 25%;margin-right: 1%;}
+      .c_flex_r_content{width: 74%;}
+    }}
+    label{display: block;text-align: center;padding: 10px 0;background: #ccc;border-radius: 20px;}
+    textarea{width:80%;display: block;margin: 0 auto 10px;}
+  }
+}
+@media screen and (max-width:640px){
+  #main{@include midashi();clear: both;padding-bottom: 30px;margin-bottom: 30px;
+    h3{text-align: center;margin: 50px 0 30px 0;border-bottom: 2px solid #000;color: #000;}
+    .map_title_c{width: 98%;display: block;padding: 0 1%;margin: 0 auto;
+      .body{margin-top: 10px;
+        p{padding: 10px;margin: 0;}
+      }
+      #map_image img{  width: 100%;display: flex;margin: 0 auto;}
+      #image{height: 300px;display: block;margin: 0 auto;}
+      p{padding: 10px;margin: 0;
+      img{width:100%;}
+    }
+      .result_flex{display: block;width: 100%;margin-bottom: 10px;padding: 10px 0;
+      .result_flex_l_content{width: 98%;margin:0 1%;}
+      .result_flex_r_content{width: 98%;margin:0 1%;display: block;
+      .swiper_input{display: block;width:100%;
+      .label_input{
+      label{display: block;text-align: center;padding: 10px 0;background: #ccc;border-radius: 20px;margin-top: 20px;}
+      input{margin: 0 auto;}}
+      button{padding: 10px 20px;margin-top: 20px;background: #000;color: #fff;display: block;margin: 10px auto 0;}}}}
+    .pagenavi{width: 70%;margin: 0 auto;display: block;}
+    .form_c{display: block;width: 100%;margin: 0 auto 30px;
+    label{display: block;max-width: 100px;margin-bottom: 5px;text-align: center;font-weight: 700;
+        margin: 10px 0;color: #fff;padding: 5px;background: #3097D1;}
+    .input{width: auto;margin: 0 auto 10px;padding: 0 10px 10px;display: block;border-radius: 5px;border: 1px solid #ccc;
+    .submit_button{display: block;margin: 0 auto;font-size: 1.5em;padding: 10px;background: #3097D1;color: #fff;border: none;border-radius: 5px;
+    a{color: #fff!important;}
+    &:hover{color: #3097D1;background: #fff;}}}}
+    .my_map{width: 100%;display: block;margin: 30px auto 30px;position: relative;overflow: hidden;}
+    #___gcse_0{width: 60%;margin: 0 auto;}
+    .c_flex{display: block;width: 100%;margin-bottom: 5px;border-bottom: 1px solid;position: relative;
+      .c_flex_r_user{
+        position: absolute;
+        right: 0;
+        display: flex;
+        bottom: 10px;
+        img{width: auto;height: 45px;}
+        p{width: auto;padding: 0px 10px 0 0;display: flex;align-items: center;}}
+      .c_flex_l_content{width: 100%;}
+      .c_flex_r_content{width: 100%;}
+    }}
+    label{display: block;text-align: center;padding: 10px 0;background: #ccc;border-radius: 20px;    margin-bottom: 20px;}
+    textarea{width:100%;display: block;margin: 0 auto 10px;}
+  }
+}

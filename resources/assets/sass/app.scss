@@ -1,0 +1,23 @@
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+//scss
+@import "header";
+@import "login";
+@import "register";
+@import "new";
+@import "user";
+@import "home";
+@import "gmap";
+
+main{
+  width: 100%;
+  margin: 0;
+}
