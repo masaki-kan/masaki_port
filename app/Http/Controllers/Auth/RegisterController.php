@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -69,18 +70,17 @@ class RegisterController extends Controller
     {
 
         if( $data['img_name'] ){
-                //requestからimsgesmmを渡す
+            //requestからimsgesmmを渡す
             $images = $data['img_name'];
-                //$imagesからファイル名（拡張子付き）で取得
-            $images_name = $images->getClientOriginalName();
-                //$imagesからファイル名のみを取得
-            $images_onlyname = pathinfo($images_name,PATHINFO_FILENAME);
-                //$imagesから拡張子のみを取得(拡張子が大文字でも小文字の変換)
+
+            $images_name = $data['name'];
+            //$imagesからファイル名のみを取得
+            //$images_onlyname = pathinfo($images_name,PATHINFO_FILENAME);
+            //$imagesから拡張子のみを取得(拡張子が大文字でも小文字の変換)
             $images_ext = mb_strtolower( $images->getClientOriginalExtension() );
             //ファイル名＋拡張子にする
-            $image_data = $images_onlyname . '.' . time(). '.' . $images_ext;
+            $image_data = $images_name . '.' . $images_ext;
             //画像ファイルパスを取得
-
             $user_fileData = file_get_contents($images->getRealPath());
             //拡張子ごとの６４エンコード処理
             if ($images_ext === 'jpg'){
@@ -100,7 +100,7 @@ class RegisterController extends Controller
             }
             $image = Image::make($user_data_url);
             //リサイズしてファイル保存
-            $image->resize(400,400)->save(storage_path() . '/app/public/user/' . $image_data );
+            $image->resize(400,400)->save(storage_path() . '/app/public/users/' . $image_data );
             $data['img_name'] = $image_data;
             }
 
