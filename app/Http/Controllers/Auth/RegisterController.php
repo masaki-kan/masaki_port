@@ -27,7 +27,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/map';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -73,26 +73,41 @@ class RegisterController extends Controller
             $images_name = $images->getClientOriginalName();
                 //$imagesからファイル名のみを取得
             $images_onlyname = pathinfo($images_name,PATHINFO_FILENAME);
-                //$imagesから拡張子のみを取得
-            $images_ext = $images->getClientOriginalExtension();
-            //拡張子が大文字でも小文字の変換
-            $images_ext_i = mb_strtolower($images_ext);
-                //ファイル名＋拡張子にする
-            $image_data = $images_onlyname . '.' . time(). '.' . $images_ext_i;
+                //$imagesから拡張子のみを取得(拡張子が大文字でも小文字の変換)
+            $images_ext = mb_strtolower( $images->getClientOriginalExtension() );
+            //ファイル名＋拡張子にする
+            $image_data = $images_onlyname . '.' . time(). '.' . $images_ext;
+            //画像ファイルパスを取得
 
-
-
-            $data['img_name']->storeAs('/public/users' , $image_data );
-
-            $base64_data = base64_encode( file_get_contents($data['img_name']->getRealPath()) );
-              }
+            $user_fileData = file_get_contents($images->getRealPath());
+            //拡張子ごとの６４エンコード処理
+            if ($images_ext === 'jpg'){
+              $user_data_url = 'data:image/jpg;base64,'. base64_encode($user_fileData);
+            }
+            if ($images_ext === 'jpeg'){
+              $user_data_url = 'data:image/jpg;base64,'. base64_encode($user_fileData);
+            }
+            if ($images_ext === 'png'){
+              $user_data_url = 'data:image/png;base64,'. base64_encode($user_fileData);
+            }
+            if ($images_ext === 'gif'){
+              $user_data_url = 'data:image/gif;base64,'. base64_encode($user_fileData);
+            }
+            if ($images_ext === 'hief'){
+              $user_data_url = 'data:image/hief;base64,'. base64_encode($user_fileData);
+            }
+            $image = Image::make($user_data_url);
+            //リサイズしてファイル保存
+            $image->resize(400,400)->save(storage_path() . '/app/public/user/' . $image_data );
+            $data['img_name'] = $image_data;
+            }
 
         return User::create([
           'name' => $data['name'],
           'email' => $data['email'],
           'password' => bcrypt($data['password']),
           'sex' => $data['sex'],
-          'img_name' => $image_data,
+          'img_name' => $data['img_name'],
          ]);
 
     }

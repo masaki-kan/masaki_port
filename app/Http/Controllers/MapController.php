@@ -78,7 +78,7 @@ class MapController extends Controller
         $data->image = $filedata;
       }
       $data->save();
-      return redirect()->back();
+      return redirect('/');
     }
     //リスト削除処理
     public function destroy($id){
