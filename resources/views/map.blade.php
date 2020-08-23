@@ -8,7 +8,9 @@
 
 <div class="c_flex">
   <div class="c_flex_l_content">
-<p id="map_image"><img src="{{ asset('storage/mapimage/' . $map->image) }}"></p>
+<p id="map_image">
+@if( $map->image->getClientOriginalExtension() == jpeg )
+  <img src="data:image/jpeg;base64,{{ $map->image }}"></p>
   </div>
 
 <div class="c_flex_r_content">
