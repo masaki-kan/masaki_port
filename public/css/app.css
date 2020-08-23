@@ -8459,7 +8459,7 @@ button.close {
 
 @media screen and (min-width: 641px) {
   .login_form {
-    width: 960px;
+    width: 930px;
     margin: 0 auto;
     padding: 20px 30px;
   }
@@ -8498,7 +8498,7 @@ button.close {
   .login_form {
     width: 100%;
     margin: 0;
-    padding: 20px 30px;
+    padding: 20px 0;
   }
 
   .login_form h2 {
@@ -9142,7 +9142,6 @@ body p {
   }
 
   #main .map_title_c #image {
-    height: 300px;
     display: block;
     margin: 0 auto;
   }
@@ -9369,7 +9368,6 @@ body p {
   }
 
   #main .map_title_c #image {
-    height: 300px;
     display: block;
     margin: 0 auto;
   }
