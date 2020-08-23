@@ -39,8 +39,6 @@ class UserIndexController extends Controller
         //取得した拡張子を小文字に変換
         $image_file_ext = mb_strtolower( $image->getClientOriginalExtension() );
         $iamge_data = $user->id . '.' . $image_file_ext;
-        $request->img_name = $iamge_data;
-        $user->img_name = $request->img_name;
 
         $user_fileData = file_get_contents($image->getRealPath());
         //拡張子ごとの６４エンコード処理
@@ -59,9 +57,9 @@ class UserIndexController extends Controller
         if ($image_file_ext === 'hief'){
           $user_data_url = 'data:image/hief;base64,'. base64_encode($user_fileData);
         }
-        $user_create_image = Image::make($user_data_url);
+        $user_image = Image::make($user_data_url);
         //リサイズしてファイル保存
-        $user_create_image->resize(400,400)->save(storage_path() . '/app/public/users/' . $image_data );
+        $user_image->resize(400,400)->save(storage_path() . '/app/public/users/' . $image_data );
         $user->img_name = $user_data_url;
       }
       $user->save();
