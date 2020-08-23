@@ -8535,7 +8535,75 @@ button.close {
   }
 }
 
-@media screen and (min-width: 641px) {
+@media screen and (min-width: 641px) and (max-width: 959px) {
+  .register_form {
+    width: 98%;
+    margin: 0 auto;
+    padding: 20px 1%;
+  }
+
+  .register_form h2 {
+    text-align: center;
+  }
+
+  .register_form label {
+    color: #3097D1;
+    padding: 10px 0 5px 0;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    text-align: left;
+  }
+
+  .register_form .form_radio {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .register_form .form_radio input {
+    width: auto;
+  }
+
+  .register_form .form_cont {
+    width: 100%;
+    display: block;
+    margin: 10px auto;
+  }
+
+  .register_form .form_cont input {
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    line-height: 2em;
+  }
+
+  .register_form .form_cont p img {
+    height: 200px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .register_form .form_cont .submit .submit_button {
+    display: block;
+    margin: 0 auto;
+    font-size: 20px;
+    padding: 10px;
+    background: #3097D1;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+  }
+
+  .register_form .form_cont .submit .submit_button a {
+    font-size: 20px;
+    background: #3097D1;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
   .register_form {
     width: 960px;
     margin: 0 auto;
