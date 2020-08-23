@@ -75,7 +75,7 @@ class MapController extends Controller
         //リサイズしてファイル保存
         $image->resize(400,400)->save(storage_path() . '/app/public/mapimage/' . $filedata );
 
-        $data->image = base64_encode( $user_fileData );
+        $data->image = $filedata;
         //ファイル名＋拡張子を入れる
         //$data->image = $data_url;
       }
@@ -123,7 +123,7 @@ class MapController extends Controller
 
     public function create(Request $request){
 
-      $created_data = Map::find($request->id);
+      $created_data = Map::find('id' ,$request->id);
       $created_data->body = $request->body;
       if( isset($request->image) ){
         $created_image = $request->image;

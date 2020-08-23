@@ -34,13 +34,13 @@ class UserIndexController extends Controller
       $user->email = $request->email;
 
       if( isset($request->img_name) ){
-        Storage::disk('public')->delete('users', $user->img_name);
+        //Storage::disk('public')->delete('users', $user->img_name);
         $image = $request->img_name;
         //取得した拡張子を小文字に変換
         $image_file_ext = mb_strtolower( $image->getClientOriginalExtension() );
         $image_data = $user->id . '.' . $image_file_ext;
 
-        $user_fileData = file_get_contents($image->getRealPath());
+        $user_fileData = file_get_contents( $image->getRealPath() );
         //拡張子ごとの６４エンコード処理
         if ($image_file_ext === 'jpg'){
           $user_data_url = 'data:image/jpg;base64,'. base64_encode($user_fileData);
@@ -60,7 +60,7 @@ class UserIndexController extends Controller
         $user_image = Image::make($user_data_url);
         //リサイズしてファイル保存
         $user_image->resize(400,400)->save(storage_path() . '/app/public/users/' . $image_data );
-        $user->img_name = $user_data_url;
+        $user->img_name = $image_data;
       }
       $user->save();
       return redirect()->back();
