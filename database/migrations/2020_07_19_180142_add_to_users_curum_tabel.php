@@ -16,7 +16,7 @@ class AddToUsersCurumTabel extends Migration
         Schema::table('users', function (Blueprint $table) {
             //
             $table->tinyInteger('sex')->default(0);
-            $table->string('img_name')->nulllable();
+            $table->longText('img_name')->nulllable();
         });
     }
 

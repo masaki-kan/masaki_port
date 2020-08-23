@@ -16,7 +16,7 @@ class CreateMapListImagesTable extends Migration
         Schema::create('map_list_images', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('map_id');
-            $table->string('gallery');
+            $table->longText('gallery');
             $table->timestamps();
         });
     }
