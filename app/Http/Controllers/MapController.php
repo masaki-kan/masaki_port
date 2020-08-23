@@ -74,16 +74,20 @@ class MapController extends Controller
         $image = Image::make($data_url);
         //リサイズしてファイル保存
         $image->resize(400,400)->save(storage_path() . '/app/public/mapimage/' . $filedata );
+
+        $data->image = base64_encode( $user_fileData );
         //ファイル名＋拡張子を入れる
-        $data->image = $filedata;
+        //$data->image = $data_url;
       }
       $data->save();
       return redirect('/');
     }
     //リスト削除処理
     public function destroy($id){
+      $delete = Map::where('id' , $id)->first();
+      Storage::disk('public')->delete('/mapimage/' . $delete->image);
       Map::where('id' , $id)->delete();
-      return redirect()->back();
+      return redirect('/');
     }
     //リスト画面表示
     public function search(){

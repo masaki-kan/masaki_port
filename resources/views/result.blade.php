@@ -5,6 +5,7 @@
 <div class="map_title_c">
   @if( $address->user_id == Auth::user()->id )
   <label><a href="{{ route('mapcreate' , $address->id ) }}">リスト編集</a></label>
+  <label><a href="{{ route('map_delete' , $address->id ) }}">リスト削除</a></label>
   @endif
   <div class="result_flex">
   <div class="result_flex_l_content">

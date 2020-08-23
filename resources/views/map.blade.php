@@ -8,14 +8,14 @@
 
 <div class="c_flex">
   <div class="c_flex_l_content">
-<p id="map_image"><img src="/storage/mapimage/{{ $map->image }}"></p>
+<p id="map_image"><img src="{{ asset('storage/mapimage/' . $map->image) }}"></p>
   </div>
 
 <div class="c_flex_r_content">
    <label id="title"><a href="{{ route('gmap' , $map->id ) }}">{{ $map->map_title }}</a></label>
 <!--<button id="map"><a href="{{ route('gmap' , $map->map_title ) }}">map</a></button>-->
 <!--<button id="delete"><a href="{{ route('map_delete' , $map->id ) }}" onclick="return confirm('{{$map->map_title}}を削除しますか？')">削除</a></button>-->
-<p id="title">{{ $map->body }}</p>
+<p id="title">{!! nl2br(e($map->body)) !!}</p>
 <p id="title">{{ $map->data }}</p>
 
 </div>
