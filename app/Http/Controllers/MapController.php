@@ -122,7 +122,7 @@ class MapController extends Controller
 
     public function create(Request $request){
 
-      $created_data = Map::find('id' ,$request->id);
+      $created_data = Map::find($request->id);
       $created_data->body = $request->body;
       if( isset($request->image) ){
         $created_image = $request->image;
