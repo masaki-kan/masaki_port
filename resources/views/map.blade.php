@@ -11,6 +11,7 @@
 <p id="map_image">
 @if( $map->image->getClientOriginalExtension() == jpeg )
   <img src="data:image/jpeg;base64,{{ $map->image }}"></p>
+  @endif
   </div>
 
 <div class="c_flex_r_content">
