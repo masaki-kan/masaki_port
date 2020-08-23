@@ -4,7 +4,7 @@
 <div class="user_content">
 　<h2>プロフィール</h2>
 <label>ユーザー名</label>
-  <p><img src="data:image/png;base64,{{ $users->img_name }}"</p>
+  <p><img src="/storage/users/{{ $users->img_name }}"></p>
   <p>{{ $users->name }}</p>
   <label>メールアドレス</label>
 <p>{{ $users->email }}</p>
