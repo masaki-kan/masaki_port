@@ -43,19 +43,19 @@ class UserIndexController extends Controller
 
         $user_fileData = file_get_contents($image->getRealPath());
         //拡張子ごとの６４エンコード処理
-        if ($images_ext === 'jpg'){
+        if ($image_file_ext === 'jpg'){
           $user_data_url = 'data:image/jpg;base64,'. base64_encode($user_fileData);
         }
-        if ($images_ext === 'jpeg'){
+        if ($image_file_ext === 'jpeg'){
           $user_data_url = 'data:image/jpg;base64,'. base64_encode($user_fileData);
         }
-        if ($images_ext === 'png'){
+        if ($image_file_ext === 'png'){
           $user_data_url = 'data:image/png;base64,'. base64_encode($user_fileData);
         }
-        if ($images_ext === 'gif'){
+        if ($image_file_ext === 'gif'){
           $user_data_url = 'data:image/gif;base64,'. base64_encode($user_fileData);
         }
-        if ($images_ext === 'hief'){
+        if ($image_file_ext === 'hief'){
           $user_data_url = 'data:image/hief;base64,'. base64_encode($user_fileData);
         }
         $image = Image::make($user_data_url);
