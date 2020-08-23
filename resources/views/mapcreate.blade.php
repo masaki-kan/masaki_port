@@ -9,7 +9,7 @@
                       <input type="hidden" name="id" value="{{ $creates->id }}">
                       <input type="hidden" name="map_title" value="{{ $creates->map_title }}">
                       <label for="img_name" class="">画像</label>
-                         <p><img src="$creates->image"></p>
+                         <p><img src="{{ $creates->image }}"></p>
                       <div class="form_cont">
                           <input id="img_name" type="file" class="" name="image">
                       </div>
