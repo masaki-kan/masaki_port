@@ -46,7 +46,7 @@ class UserIndexController extends Controller
           $user_data_url = 'data:image/jpg;base64,'. base64_encode($user_fileData);
         }
         if ($image_file_ext === 'jpeg'){
-          $user_data_url = 'data:image/jpg;base64,'. base64_encode($user_fileData);
+          $user_data_url = 'data:image/jpeg;base64,'. base64_encode($user_fileData);
         }
         if ($image_file_ext === 'png'){
           $user_data_url = 'data:image/png;base64,'. base64_encode($user_fileData);
