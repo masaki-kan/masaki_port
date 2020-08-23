@@ -101,7 +101,6 @@ class RegisterController extends Controller
             //$image = Image::make($user_data_url);
             //リサイズしてファイル保存
             //$image->resize(400,400)->save(storage_path() . '/app/public/users/' . $image_data );
-            $data['img_name'] = $user_data_url;
             }
 
         return User::create([
@@ -109,7 +108,7 @@ class RegisterController extends Controller
           'email' => $data['email'],
           'password' => bcrypt($data['password']),
           'sex' => $data['sex'],
-          'img_name' => $data['img_name'],
+          'img_name' => $user_data_url,
          ]);
 
     }
