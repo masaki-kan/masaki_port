@@ -60,7 +60,7 @@ class MapController extends Controller
           $data_url = 'data:image/jpg;base64,'. base64_encode($fileData);
         }
         if ($file === 'jpeg'){
-          $data_url = 'data:image/jpg;base64,'. base64_encode($fileData);
+          $data_url = 'data:image/jpeg;base64,'. base64_encode($fileData);
         }
         if ($file === 'png'){
           $data_url = 'data:image/png;base64,'. base64_encode($fileData);
