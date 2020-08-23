@@ -7,6 +7,7 @@ use Validator;
 use Illuminate\Support\Facades\Storage;
 use App\User;
 use Auth;
+use Intervention\Image\Facades\Image;
 
 class UserIndexController extends Controller
 {
