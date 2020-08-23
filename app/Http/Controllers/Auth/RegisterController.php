@@ -87,7 +87,7 @@ class RegisterController extends Controller
               $user_data_url = 'data:image/jpg;base64,'. base64_encode($user_fileData);
             }
             if ($images_ext === 'jpeg'){
-              $user_data_url = 'data:image/jpg;base64,'. base64_encode($user_fileData);
+              $user_data_url = 'data:image/jpeg;base64,'. base64_encode($user_fileData);
             }
             if ($images_ext === 'png'){
               $user_data_url = 'data:image/png;base64,'. base64_encode($user_fileData);
