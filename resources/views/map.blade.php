@@ -9,9 +9,8 @@
 <div class="c_flex">
   <div class="c_flex_l_content">
 <p id="map_image">
-
-  <img src="data:image/jpeg;base64,{{ $map->image }}"></p>
-
+  
+  <img src="{{ asset(　'storage/mapimage/' . $map->image　) }}"></p>
   </div>
 
 <div class="c_flex_r_content">
