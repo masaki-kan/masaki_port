@@ -38,7 +38,7 @@ class UserIndexController extends Controller
         $image = $request->img_name;
         //取得した拡張子を小文字に変換
         $image_file_ext = mb_strtolower( $image->getClientOriginalExtension() );
-        $iamge_data = $user->id . '.' . $image_file_ext;
+        $image_data = $user->id . '.' . $image_file_ext;
 
         $user_fileData = file_get_contents($image->getRealPath());
         //拡張子ごとの６４エンコード処理
