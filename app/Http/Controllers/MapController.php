@@ -71,9 +71,11 @@ class MapController extends Controller
         if ($file === 'hief'){
           $data_url = 'data:image/hief;base64,'. base64_encode($fileData);
         }
-        $image = Image::make($data_url);
+        $request->file('image')->storeAs('/app/public/mapimage/' , $filedata);
+
+        //$image = Image::make($data_url);
         //リサイズしてファイル保存
-        $image->resize(400,400)->save(storage_path() . '/app/public/mapimage/' . $filedata );
+        //$image->resize(400,400)->save(storage_path() . '/app/public/mapimage/' . $filedata );
 
         $data->image = $filedata;
         //ファイル名＋拡張子を入れる

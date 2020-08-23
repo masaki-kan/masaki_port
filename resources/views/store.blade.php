@@ -29,7 +29,7 @@
 @if( $errors->has('body'))
 { $errors->first('body') }}
 @endif
-<textarea type="text" rows="8" cols="80" name="body" placeholder="20文字以上で">{{ old('body') }}</textarea>
+<textarea type="text" rows="8" cols="80" name="body" placeholder="５文字以上で">{{ old('body') }}</textarea>
 
 <label for="image">写真</label>
 <div class="form_cont">
