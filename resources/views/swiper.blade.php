@@ -2,7 +2,7 @@
 <div id="slider" class="swiper-container">
   <div class="swiper-wrapper">
     @foreach( $address->MapListImages as $image )
-    <div class="swiper-slide"><img src="/storage/mapimage/{{ $image->gallery }}" alt="{{ $image->gallery }}"></div>
+    <div class="swiper-slide"><img src="{{ $image->gallery }}" alt="{{ $image->gallery }}"></div>
     @endforeach
   </div>
   <div class="swiper-button-prev swiper-button-white"></div>
@@ -12,7 +12,7 @@
 <div id="thumbs" class="swiper-container mb60">
   <div class="swiper-wrapper swiper-wrapper-2">
     @foreach( $address->MapListImages as $image )
-    <div class="swiper-slide"><img src="/storage/mapimage/{{ $image->gallery }}" alt="{{ $image->gallery }}"></div>
+    <div class="swiper-slide"><img src="{{ $image->gallery }}" alt="{{ $image->gallery }}"></div>
     @endforeach
   </div>
 </div>

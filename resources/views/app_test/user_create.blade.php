@@ -31,7 +31,7 @@
                             </div>
                           <div class="form_cont">
                         <label for="img_name" class="">画像</label>
-                           <p><img src="/storage/users/{{ $users->img_name }}"></p>
+                           <p><img src="{{ $users->img_name }}"></p>
                            </div>
 
                         <div class="form_cont">

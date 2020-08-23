@@ -20,7 +20,7 @@
 
 </div>
 <div class="c_flex_r_user">
-<img src="/storage/users/{{ $map->user->img_name }}">
+<img src="{{ $map->user->img_name }}">
 <p>{{ $map->user->name }}</p>
 </div>
 </div>

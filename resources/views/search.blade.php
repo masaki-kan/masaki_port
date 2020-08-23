@@ -33,7 +33,7 @@
 
 <div class="c_flex">
   <div class="c_flex_l_content">
-<p id="map_image"><img src="/storage/mapimage/{{ $data->image }}"></p>
+<p id="map_image"><img src="{{ $data->image }}"></p>
   </div>
 
 <div class="c_flex_r_content">

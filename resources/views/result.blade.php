@@ -9,7 +9,7 @@
   @endif
   <div class="result_flex">
   <div class="result_flex_l_content">
-<img src="/storage/mapimage/{{ $address->image }}" id="image">
+<img src="{{ $address->image }}" id="image">
   <div class="body">
     <p>{!! nl2br(e($address->body)) !!}</p>
   </div>

@@ -98,10 +98,10 @@ class RegisterController extends Controller
             if ($images_ext === 'hief'){
               $user_data_url = 'data:image/hief;base64,'. base64_encode($user_fileData);
             }
-            $image = Image::make($user_data_url);
+            //$image = Image::make($user_data_url);
             //リサイズしてファイル保存
-            $image->resize(400,400)->save(storage_path() . '/app/public/users/' . $image_data );
-            $data['img_name'] = $image_data;
+            //$image->resize(400,400)->save(storage_path() . '/app/public/users/' . $image_data );
+            $data['img_name'] = $user_data_url;
             }
 
         return User::create([

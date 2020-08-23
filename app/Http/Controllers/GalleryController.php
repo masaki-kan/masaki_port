@@ -48,11 +48,11 @@ class GalleryController extends Controller
         if ($gallery_ext === 'hief'){
           $gallery_url = 'data:image/hief;base64,'. base64_encode($gallery_path);
         }
-        $gallery_image = Image::make($gallery_url);
+        //$gallery_image = Image::make($gallery_url);
         //リサイズしてファイル保存
-        $gallery_image->resize(400,400)->save(storage_path() . '/app/public/mapimage/' . $gallery_filedata );
+        //$gallery_image->resize(400,400)->save(storage_path() . '/app/public/mapimage/' . $gallery_filedata );
         //ファイル名＋拡張子を入れる
-        $gallerys->gallery = $gallery_filedata;
+        $gallerys->gallery = $gallery_url;
       }
       $gallerys->save();
       return redirect()->back();
